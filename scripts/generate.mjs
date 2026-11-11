@@ -155,7 +155,7 @@ export function simulate(seed = SEED) {
   const out = [];
   for (const p of procs) {
     const t = TAILS[p.name];
-    if (t) for (let i = 1; i <= t.M; i++) { const [slug, cond] = t.gen(i); p.behaviors.push(B(slug, t.type, cond, t.top * Math.pow(i, -t.s), { tail: true })); }
+    if (t) for (let i = 1; i <= t.M; i++) { const [slug, cond] = t.gen(i); p.behaviors.push(B(slug, t.type, cond, +(t.top * Math.pow(i, -t.s)).toPrecision(8), { tail: true })); }
     const behaviors = p.behaviors.map((b) => ({ id: `${p.name}:${b.slug}`, slug: b.slug, type: b.type, cond: b.cond, pi: b.pi, schedule: b.schedule || null, onDayP: b.onDayP || 0, tail: !!b.tail, daily: new Array(DAYS).fill(0), events: [] }));
     for (let d = 0; d < DAYS; d++) {
       for (let dev = 0; dev < DEVICES; dev++) {
