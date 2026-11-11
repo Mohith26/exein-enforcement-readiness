@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Enforcement readiness · Policies · Exein Runtime</title>
+<meta name="description" content="Unofficial concept: statistical enforcement readiness for learned runtime allowlists in Exein Runtime." />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <a class="mark" href="#/policies/readiness" aria-label="Exein Runtime home"><img src="assets/exein-mark.svg" alt="" width="26" height="26" /></a>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"></nav>
+  <nav class="tabs-top" aria-label="Primary">
+    <a href="#/dashboard" data-nav="dashboard">Dashboard</a>
+    <a href="#/devices" data-nav="devices">Devices</a>
+    <a href="#/incidents" data-nav="incidents">Incidents</a>
+    <a href="#/policies/readiness" data-nav="policies">Policies</a>
+    <a href="#/reports" data-nav="reports">Reports</a>
+  </nav>
+  <div class="top-right">
+    <button class="icon-btn" id="helpBtn" aria-label="Keyboard shortcuts"><i data-lucide="keyboard"></i></button>
+    <span class="avatar" aria-label="Signed in">GW</span>
+  </div>
+</header>
+<main class="page" id="view" aria-live="polite">
+  <div class="loading"><div class="sk sk-h"></div><div class="sk-row"><div class="sk sk-card"></div><div class="sk sk-card"></div><div class="sk sk-card"></div><div class="sk sk-card"></div></div><div class="sk sk-table"></div></div>
+</main>
+<footer class="foot">Unofficial concept demo by Mohith Gajjela. Not affiliated with Exein. Synthetic fleet data. <a href="https://github.com/Mohith26/exein-enforcement-readiness">Source</a></footer>
+
+<div class="toast" id="toast" role="status"></div>
+<dialog id="enfDlg" aria-labelledby="enfTitle"><form method="dialog">
+  <h3 id="enfTitle">Switch profiles to enforce</h3><div id="enfBody"></div>
+  <div class="dlg-actions"><button class="btn ghost" value="cancel">Cancel</button><button class="btn primary" value="ok" id="enfOk">Enforce</button></div>
+</form></dialog>
+<dialog id="keysDlg" aria-labelledby="keysTitle"><form method="dialog">
+  <h3 id="keysTitle">Keyboard shortcuts</h3>
+  <table class="keys">
+    <tr><td><kbd>J</kbd> <kbd>K</kbd></td><td>Move through profiles</td></tr>
+    <tr><td><kbd>Enter</kbd></td><td>Open profile</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>Back to all profiles</td></tr>
+    <tr><td><kbd>[</kbd> <kbd>]</kbd></td><td>Decide one day earlier / later</td></tr>
+    <tr><td><kbd>E</kbd></td><td>Enforce ready profiles</td></tr>
+    <tr><td><kbd>X</kbd></td><td>Export policy (TOML)</td></tr>
+    <tr><td><kbd>?</kbd></td><td>This help</td></tr>
+  </table>
+  <div class="dlg-actions"><button class="btn primary" value="ok">Close</button></div>
+</form></dialog>
+<script type="module" src="app.js"></script>
+</body>
+</html>
